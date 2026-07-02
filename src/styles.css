@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto+Slab:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Roboto+Slab:wght@400;700;900&display=swap');
 
 :root {
   color-scheme: dark;
@@ -61,23 +61,23 @@ p { color: var(--ash); line-height: 1.72; }
   z-index: 3;
   backdrop-filter: blur(18px);
 }
-.brand { display: inline-flex; align-items: center; gap: .75rem; color: var(--cream); font: 700 1rem/1 'Oswald', sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.brand { display: inline-flex; align-items: center; gap: .75rem; color: var(--cream); font: 400 1rem/1 'Rye', Georgia, serif; letter-spacing: .12em; text-transform: uppercase; }
 .brand img { width: 4.2rem; height: 3.2rem; object-fit: contain; filter: drop-shadow(0 0 18px rgba(244,122,24,.4)); }
-.nav-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .35rem; color: var(--ash); font: 700 .82rem/1 'Oswald', sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.nav-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .35rem; color: var(--ash); font: 400 .82rem/1 'Rye', Georgia, serif; letter-spacing: .12em; text-transform: uppercase; }
 .nav-links a { padding: .7rem .9rem; border-radius: 999px; }
 .nav-links a:hover { background: rgba(244,122,24,.11); color: var(--flame); }
 
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(18rem, .9fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; padding: clamp(2rem, 7vw, 7rem) clamp(1rem, 5vw, 5rem) 5rem; }
 .eyebrow, .button, h1, h2, h3, h4 { text-transform: uppercase; }
-.eyebrow { color: var(--flame); font: 700 .82rem/1.4 'Oswald', sans-serif; letter-spacing: .22em; }
-h1, h2, h3, h4 { font-family: 'Oswald', Impact, sans-serif; margin: 0; line-height: .92; letter-spacing: -.025em; }
+.eyebrow { color: var(--flame); font: 400 .82rem/1.4 'Rye', Georgia, serif; letter-spacing: .22em; }
+h1, h2, h3, h4 { font-family: 'Rye', Georgia, serif; margin: 0; line-height: .92; letter-spacing: -.025em; }
 h1 { font-size: clamp(4rem, 10vw, 9.2rem); max-width: 9ch; text-shadow: 0 6px 0 #000; }
 h2 { font-size: clamp(2.35rem, 5.6vw, 5rem); }
 h3 { font-size: clamp(1.65rem, 2.9vw, 2.6rem); color: var(--flame); }
 h4 { font-size: clamp(1.05rem, 1.8vw, 1.42rem); margin: 0 0 .35rem; letter-spacing: .01em; }
 .lead { font-size: clamp(1.07rem, 1.8vw, 1.35rem); max-width: 47rem; }
 .hero-actions, .section-heading { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-top: 2rem; }
-.button, .phone-card { display: inline-flex; align-items: center; justify-content: center; min-height: 3.5rem; padding: .95rem 1.35rem; border-radius: 999px; font: 700 .9rem/1 'Oswald', sans-serif; letter-spacing: .12em; border: 1px solid var(--ember); box-shadow: 0 14px 30px rgba(0,0,0,.3); }
+.button, .phone-card { display: inline-flex; align-items: center; justify-content: center; min-height: 3.5rem; padding: .95rem 1.35rem; border-radius: 999px; font: 400 .9rem/1.1 'Rye', Georgia, serif; letter-spacing: .12em; border: 1px solid var(--ember); box-shadow: 0 14px 30px rgba(0,0,0,.3); }
 .primary { background: linear-gradient(135deg, var(--flame), var(--ember)); color: #170b04; }
 .secondary, .phone-card { background: rgba(0,0,0,.45); color: var(--cream); }
 .logo-card { margin: 0; border-radius: 32px; padding: clamp(1rem, 3vw, 2rem); background: radial-gradient(circle, rgba(244,122,24,.18), rgba(0,0,0,.3) 62%); border: 1px solid var(--line); box-shadow: inset 0 0 70px rgba(244,122,24,.08), 0 22px 80px rgba(0,0,0,.38); }
@@ -102,7 +102,7 @@ h4 { font-size: clamp(1.05rem, 1.8vw, 1.42rem); margin: 0 0 .35rem; letter-spaci
 .wide { grid-row: span 2; }
 .menu-item { display: grid; grid-template-columns: 1fr auto; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px dashed var(--line); }
 .menu-item p { margin: 0; }
-.menu-item strong, .compact-item strong, .drinks strong, .add-on strong { color: var(--cream); font: 700 1.55rem/1 'Oswald', sans-serif; }
+.menu-item strong, .compact-item strong, .drinks strong, .add-on strong { color: var(--cream); font: 400 1.55rem/1 'Rye', Georgia, serif; }
 .feature { margin-inline: -.65rem; padding-inline: .65rem; border-radius: 18px; background: linear-gradient(90deg, rgba(244,122,24,.16), transparent); }
 .add-on { margin-top: 1rem; display: flex; justify-content: space-between; gap: 1rem; align-items: center; border: 1px solid rgba(255,176,24,.45); border-radius: 999px; padding: .85rem 1rem; color: var(--cream); font-weight: 900; background: rgba(255,176,24,.08); }
 .compact-item { display: flex; justify-content: space-between; gap: 1rem; padding: .95rem 0; border-bottom: 1px dashed var(--line); font-weight: 900; }
