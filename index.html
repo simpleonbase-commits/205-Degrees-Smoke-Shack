@@ -3,55 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="205 Degrees Smoke Shack - Idaho BBQ food truck serving brisket, pulled pork, sandwiches, sides, catering, and military discounts." />
-    <title>205 Degrees Smoke Shack | BBQ Food Truck</title>
+    <meta name="description" content="205 Degrees Smoke Shack serves bold Idaho barbecue, smoked meats, sandwiches, sides, catering, and a standing military discount." />
+    <title>205 Degrees Smoke Shack | Idaho Barbecue</title>
+    <link rel="preload" href="/assets/logo.svg" as="image" />
     <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
     <main>
       <header class="hero" id="home">
         <nav class="nav" aria-label="Primary navigation">
-          <a class="brand" href="#home">🔥 205° Smoke Shack</a>
+          <a class="brand" href="#home"><img src="/assets/logo.svg" alt="" /> <span>205° Smoke Shack</span></a>
           <div class="nav-links">
-            <a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#orders">Online Orders</a><a href="#military">Military Discount</a><a href="#visit">Visit</a>
+            <a href="#menu">Menu</a><a href="#catering">Catering</a><a href="#orders">Orders</a><a href="#visit">Visit</a>
           </div>
         </nav>
         <section class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">🚚 BBQ food truck • smoke, fire, flavor</p>
-            <h1>205 Degrees Smoke Shack</h1>
-            <p class="lead">Idaho BBQ built around low-and-slow meats, bold orange ember energy, and a food-truck menu that gets straight to the good stuff.</p>
+            <p class="eyebrow">Idaho barbecue • smoke, fire, craft</p>
+            <h1>Built on smoke. Served with pride.</h1>
+            <p class="lead">205 Degrees Smoke Shack brings a polished, pit-forward BBQ experience to pop-ups, private events, and our growing mobile kitchen—made for people who care about flavor, not gimmicks.</p>
             <div class="hero-actions">
-              <a class="button primary" href="#menu">☰ View Menu</a>
-              <a class="button secondary" href="tel:12085823259">☎ Catering: 208-582-3259</a>
+              <a class="button primary" href="#menu">View the menu</a>
+              <a class="button secondary" href="tel:12085823259">Catering: 208-582-3259</a>
             </div>
           </div>
-          <div class="badge-card" aria-label="205 Smoke Shack illustrated smoker badge">
-            <svg class="smoke-mark" viewBox="0 0 180 180" aria-hidden="true">
-              <defs><linearGradient id="ember" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#ffb21a"/><stop offset="0.55" stop-color="#f3701b"/><stop offset="1" stop-color="#c93216"/></linearGradient></defs>
-              <circle cx="90" cy="90" r="76" fill="none" stroke="url(#ember)" stroke-width="6" stroke-dasharray="12 8" />
-              <path d="M62 128c18-16-14-27 6-49 11-12 9-23 4-35 27 17 38 43 21 70 20-14 26-33 20-57 35 37 25 75-26 89 8-8 9-15 2-23-8 11-17 18-27 5z" fill="url(#ember)" />
-              <rect x="48" y="92" width="83" height="34" rx="14" fill="#15110d" stroke="#f7c278" stroke-width="5" />
-              <rect x="122" y="101" width="24" height="16" rx="5" fill="#15110d" stroke="#f7c278" stroke-width="5" />
-              <line x1="64" y1="108" x2="114" y2="108" stroke="#f7c278" stroke-width="4" stroke-linecap="round" />
-              <circle cx="87" cy="108" r="5" fill="#f7c278" />
-            </svg>
-            <div class="badge-title"><span>205</span><small>Smoke Shack</small></div>
-            <p>Custom ember artwork inspired by your provided menu art.</p>
-          </div>
+          <figure class="logo-card">
+            <img src="/assets/logo.svg" alt="205 Smoke Shack logo with smoker, fire, and copper badge" />
+          </figure>
         </section>
       </header>
-      <section class="section announcement" id="military"><span class="big-icon">🛡️</span><div><h2>We honor the troops here.</h2><p>Veterans and active service military receive <strong>20% off</strong> as our thanks for your service.</p></div></section>
-      <section class="section" id="menu"><div class="section-heading"><p class="eyebrow">🍽 Fresh from the smoker</p><h2>Menu Highlights</h2></div><div class="menu-layout">
-        <div class="panel wide"><h3>Sandwiches</h3><article class="menu-item"><div><h4>Original Pulled Pork Sandwich</h4><p>Basic and delicious: meat, bread, and sauce.</p></div><strong>$8</strong></article><article class="menu-item"><div><h4>Deluxe Pulled Pork Sandwich</h4><p>Extra meat with cheese torched on top.</p></div><strong>$12</strong></article><article class="menu-item"><div><h4 class="hot">Spicy Pulled Pork Sandwich</h4><p>Jalapeño, raspberry chipotle BBQ sauce, pepper jack cheese.</p></div><strong>$11</strong></article><article class="menu-item"><div><h4>Brisket Sandwich</h4><p>Slow smoked brisket piled high on a soft bun.</p></div><strong>$12</strong></article><article class="menu-item"><div><h4 class="hot">Spicy Brisket Sandwich</h4><p>Jalapeño, raspberry chipotle BBQ sauce, pepper jack cheese.</p></div><strong>$12</strong></article></div>
-        <div class="panel"><h3>Meats by the Pound</h3><div class="compact-item"><span>🐄 Brisket</span><strong>$20/lb</strong></div><div class="compact-item"><span>🐖 Pulled Pork</span><strong>$15/lb</strong></div><div class="compact-item"><span>🐓 Slow Cooked Chicken</span><strong>$3.50/piece</strong></div></div>
-        <div class="panel"><h3>Sides</h3><ul class="star-list"><li>★ Cornbread</li><li>★ Spicy Cornbread</li><li>★ Smoked Beans</li><li>★ Bag of Chips</li></ul><h3>Kids • $6</h3><ul class="star-list"><li>★ Hotdog</li><li>★ Pulled Pork Slider</li><li>★ 1 Piece Chicken</li></ul></div>
-        <div class="panel drinks"><h3>Drinks</h3><p><strong>$2</strong> per can of soda pop.</p></div>
-      </div></section>
-      <section class="section split" id="catering"><div><p class="eyebrow">📅 Parties, jobsites, and events</p><h2>Catering</h2><p>Bring 205 Degrees Smoke Shack to your gathering. For now, call or text to discuss dates, headcount, and smoked-meat options.</p></div><a class="phone-card" href="tel:12085823259">☎ 208-582-3259</a></section>
-      <section class="section order-card" id="orders"><span class="big-icon">🛍️</span><h2>Online Orders Coming Soon</h2><p>We are preparing an online ordering flow for pickup windows, specials, and food-truck availability. Check back soon.</p></section>
-      <section class="section visit" id="visit"><span class="big-icon">📍</span><div><h2>Food Truck Launch</h2><p>205 Degrees Smoke Shack is starting as a food truck. Location schedule and launch details will be posted here as they are confirmed.</p></div></section>
-      <footer>🏆 <p>© 2026 205 Degrees Smoke Shack. Smoked low. Served proud.</p></footer>
+
+      <section class="section intro-strip" aria-label="What we serve">
+        <article><span class="icon-smoker"></span><h2>Real smoke</h2><p>Low, slow, and layered with deep barbecue character.</p></article>
+        <article><span class="icon-flame"></span><h2>Bold finish</h2><p>Torched cheese, chives, extra meat, and signature sauces.</p></article>
+        <article><span class="icon-badge"></span><h2>Service honored</h2><p>Veterans and active service military receive <strong>20% off</strong>.</p></article>
+      </section>
+
+      <section class="section menu-section" id="menu">
+        <div class="section-heading"><p class="eyebrow">Fresh from the smoker</p><h2>Menu Highlights</h2></div>
+        <div class="menu-layout">
+          <div class="panel wide"><h3>Sandwiches</h3>
+            <article class="menu-item"><div><h4>Original Pulled Pork Sandwich</h4><p>Basic and delicious: meat, bread, and sauce.</p></div><strong>$8</strong></article>
+            <article class="menu-item feature"><div><h4>Deluxe Pulled Pork Sandwich</h4><p>Extra meat, cheese torched on top, chives, and special BBQ sauce.</p></div><strong>$11</strong></article>
+            <article class="menu-item"><div><h4 class="hot">Spicy Pulled Pork Sandwich</h4><p>Jalapeño, raspberry chipotle BBQ sauce, pepper jack cheese.</p></div><strong>$11</strong></article>
+            <article class="menu-item feature"><div><h4>Deluxe Brisket Sandwich</h4><p>Extra meat, cheese torched on top, chives, and special BBQ sauce.</p></div><strong>$11</strong></article>
+            <article class="menu-item"><div><h4 class="hot">Spicy Brisket Sandwich</h4><p>Jalapeño, raspberry chipotle BBQ sauce, pepper jack cheese.</p></div><strong>$12</strong></article>
+            <div class="add-on"><span>Add even more meat to any deluxe</span><strong>+$2.50</strong></div>
+          </div>
+          <div class="panel"><h3>Meats</h3><div class="compact-item"><span>Brisket</span><strong>$20/lb</strong></div><div class="compact-item"><span>Pulled Pork</span><strong>$15/lb</strong></div><div class="compact-item"><span>Slow Cooked Chicken</span><strong>$3.50/piece</strong></div></div>
+          <div class="panel"><h3>Sides</h3><ul class="star-list"><li>Cornbread</li><li>Spicy Cornbread</li><li>Smoked Beans</li><li>Bag of Chips</li></ul><h3>Kids • $6</h3><ul class="star-list"><li>Hotdog</li><li>Pulled Pork Slider</li><li>1 Piece Chicken</li></ul></div>
+          <div class="panel drinks"><h3>Drinks</h3><p><strong>$2</strong> per can of soda pop.</p></div>
+        </div>
+      </section>
+
+      <section class="section split" id="catering"><div><p class="eyebrow">Parties, jobsites, and events</p><h2>Catering with presence</h2><p>Bring 205 Degrees Smoke Shack to your gathering. Call or text to discuss dates, headcount, and the smoked-meat lineup that fits your event.</p></div><a class="phone-card" href="tel:12085823259">208-582-3259</a></section>
+      <section class="section order-card" id="orders"><span class="icon-flame large"></span><h2>Online Orders Coming Soon</h2><p>We are preparing a cleaner ordering flow for pickup windows, specials, and availability. Check back soon.</p></section>
+      <section class="section visit" id="visit"><span class="icon-badge large"></span><div><h2>Find the smoke</h2><p>205 Degrees Smoke Shack is building from a mobile foundation with bigger ambitions ahead. Location schedule and launch details will be posted here as they are confirmed.</p></div></section>
+      <footer><img src="/assets/logo.svg" alt="" /><p>© 2026 205 Degrees Smoke Shack. Smoked low. Served proud.</p></footer>
     </main>
   </body>
 </html>
