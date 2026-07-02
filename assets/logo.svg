@@ -1,36 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
-<title id="title">205 Degrees Smoke Shack logo</title><desc id="desc">Ember framed barbecue smoker over large 205 lettering and Smoke Shack banner.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1024" role="img" aria-labelledby="title desc">
+<title id="title">205 Degrees Smoke Shack logo</title>
+<desc id="desc">A textured black and copper barbecue badge with a smoker, flames, smoke, large 205 lettering, and a Smoke Shack banner.</desc>
 <defs>
-  <radialGradient id="glow" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#f47a18" stop-opacity=".48"/><stop offset=".45" stop-color="#8b260e" stop-opacity=".18"/><stop offset="1" stop-color="#050403" stop-opacity="0"/></radialGradient>
-  <linearGradient id="copper" x1="0" x2="1"><stop stop-color="#71300d"/><stop offset=".35" stop-color="#ff7a18"/><stop offset=".7" stop-color="#a83b10"/><stop offset="1" stop-color="#4b1808"/></linearGradient>
-  <linearGradient id="cream" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff1d2"/><stop offset=".52" stop-color="#caa46f"/><stop offset="1" stop-color="#6b4423"/></linearGradient>
-  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#000" flood-opacity=".85"/><feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#f47a18" flood-opacity=".25"/></filter>
-  <pattern id="grit" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.1" fill="#fff" opacity=".14"/><circle cx="14" cy="10" r="1" fill="#000" opacity=".23"/><circle cx="8" cy="16" r=".8" fill="#f47a18" opacity=".18"/></pattern>
+  <radialGradient id="backGlow" cx="50%" cy="47%" r="43%"><stop offset="0" stop-color="#3a1609" stop-opacity=".75"/><stop offset=".34" stop-color="#130806" stop-opacity=".8"/><stop offset="1" stop-color="#030302" stop-opacity="0"/></radialGradient>
+  <linearGradient id="copper" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#4f1b08"/><stop offset=".22" stop-color="#e56b1d"/><stop offset=".5" stop-color="#8a2f0c"/><stop offset=".76" stop-color="#ff8a25"/><stop offset="1" stop-color="#3f1305"/></linearGradient>
+  <linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fff6df"/><stop offset=".22" stop-color="#d5b783"/><stop offset=".48" stop-color="#fff0cc"/><stop offset=".75" stop-color="#9d7447"/><stop offset="1" stop-color="#f2d9ad"/></linearGradient>
+  <linearGradient id="darkMetal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#070604"/><stop offset=".35" stop-color="#3d3126"/><stop offset=".58" stop-color="#0a0908"/><stop offset="1" stop-color="#1c1712"/></linearGradient>
+  <filter id="badgeShadow" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="22" stdDeviation="16" flood-color="#000" flood-opacity=".95"/><feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#ff7418" flood-opacity=".36"/></filter>
+  <filter id="softSmoke" x="-40%" y="-50%" width="180%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+  <pattern id="grit" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="5" cy="7" r="1.1" fill="#fff" opacity=".18"/><circle cx="22" cy="12" r="1.3" fill="#000" opacity=".32"/><circle cx="14" cy="25" r=".9" fill="#a34b1a" opacity=".28"/><path d="M0 18h30" stroke="#000" stroke-opacity=".08"/></pattern>
+  <pattern id="steelGrit" width="42" height="42" patternUnits="userSpaceOnUse"><circle cx="9" cy="8" r="1.1" fill="#fff" opacity=".12"/><circle cx="31" cy="23" r="1" fill="#f07a24" opacity=".18"/><circle cx="17" cy="34" r="1.4" fill="#000" opacity=".24"/></pattern>
 </defs>
-<rect width="1200" height="900" fill="none"/>
-<g filter="url(#shadow)">
-  <path d="M254 536V430c0-199 154-360 346-360s346 161 346 360v106h54l74 76v151H126V612l74-76h54Z" fill="#0a0705" stroke="url(#copper)" stroke-width="16"/>
-  <path d="M273 529V430c0-188 146-340 327-340s327 152 327 340v99" fill="url(#glow)"/>
+<rect width="1600" height="1024" fill="#040403"/>
+<rect width="1600" height="1024" fill="url(#backGlow)"/>
+<g opacity=".16"><rect width="1600" height="1024" fill="url(#grit)"/></g>
+<g filter="url(#badgeShadow)">
+  <path d="M446 598V443c0-203 158-368 354-368s354 165 354 368v155h72l78 78v116H296V676l78-78h72Z" fill="#080805" stroke="#090604" stroke-width="34"/>
+  <path d="M446 598V443c0-203 158-368 354-368s354 165 354 368v155h72l78 78v116H296V676l78-78h72Z" fill="none" stroke="url(#copper)" stroke-width="15"/>
+  <path d="M471 580V443c0-188 147-341 329-341s329 153 329 341v138" fill="none" stroke="#ef7b24" stroke-width="5" opacity=".85"/>
+  <path d="M489 572V443c0-176 139-318 311-318s311 142 311 318v129" fill="url(#backGlow)" opacity=".62"/>
+
+  <g opacity=".86" filter="url(#softSmoke)">
+    <path d="M618 171c-40-34-15-81 26-106-17 38 43 49 4 92-15 17-28 22-30 14Z" fill="#e9d8c1" opacity=".45"/>
+    <path d="M578 196c-52-55 20-87 49-129-4 47 72 56 6 112-22 19-45 25-55 17Z" fill="#9c8b78" opacity=".35"/>
+    <path d="M642 218c-24-43 52-61 18-121 75 60 30 116-18 121Z" fill="#f5ead8" opacity=".3"/>
+  </g>
   <g opacity=".9">
-    <path d="M405 300c-18-52 35-70 10-118 52 30 78 83 52 137 42-27 51-84 36-128 82 82 52 176-61 213 19-21 20-40 4-60-20 29-43 48-74 25 40-34 0-49 33-69Z" fill="#f24a12" opacity=".85"/>
-    <path d="M473 285c10-34 2-57-20-89 75 51 107 135 23 189 14-28 14-64-3-100Z" fill="#ffb018" opacity=".82"/>
+    <path d="M590 348c-27-82 54-105 16-177 75 47 110 125 70 199 57-36 68-123 46-185 116 123 66 253-95 296 28-31 30-62 6-91-29 42-63 70-109 35 57-49 10-73 66-77Z" fill="#c93610" opacity=".78"/>
+    <path d="M696 335c17-58 1-98-35-149 116 75 157 194 29 275 22-42 25-84 6-126Z" fill="#ff7b15" opacity=".74"/>
+    <path d="M552 385c11-43 47-57 31-104 55 46 54 105-31 104Z" fill="#ffb018" opacity=".62"/>
   </g>
-  <g stroke="#d46a22" stroke-width="10" stroke-linejoin="round">
-    <rect x="401" y="251" width="354" height="122" rx="56" fill="#16110c"/>
-    <rect x="738" y="288" width="127" height="78" rx="33" fill="#15100c"/>
-    <path d="M388 351h-78"/><path d="M488 371h187"/><path d="M842 330h49"/>
-    <path d="M375 348V200h39v150" fill="#15100c"/>
-    <circle cx="579" cy="283" r="27" fill="#e8d0aa"/><path d="M579 283l12-17" stroke="#101010" stroke-width="6"/>
+
+  <g stroke="#c76320" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="610" y="244" width="345" height="121" rx="25" fill="url(#darkMetal)"/>
+    <rect x="932" y="281" width="131" height="86" rx="28" fill="url(#darkMetal)"/>
+    <path d="M597 348h-86"/><path d="M698 382h183"/><path d="M1047 325h72"/>
+    <path d="M579 348V184h40v164" fill="url(#darkMetal)"/>
+    <circle cx="790" cy="293" r="23" fill="url(#metal)"/><path d="M790 293l14-20" stroke="#17110d" stroke-width="5"/>
+    <path d="M661 236h27M870 236h27M651 366v22M919 365v22" stroke-width="6"/>
   </g>
-  <g font-family="Impact, 'Arial Black', sans-serif" font-weight="900" text-anchor="middle" stroke-linejoin="round">
-    <text x="600" y="610" font-size="245" letter-spacing="-10" fill="#080604" stroke="#000" stroke-width="58">205</text>
-    <text x="600" y="610" font-size="245" letter-spacing="-10" fill="url(#cream)" stroke="#d56b21" stroke-width="14">205</text>
-    <text x="600" y="610" font-size="245" letter-spacing="-10" fill="url(#grit)" opacity=".8">205</text>
+  <rect x="610" y="244" width="345" height="121" rx="25" fill="url(#steelGrit)" opacity=".38"/>
+
+  <g font-family="Impact, 'Arial Black', sans-serif" font-weight="900" text-anchor="middle" stroke-linejoin="miter">
+    <text x="800" y="720" font-size="330" letter-spacing="-17" fill="#050403" stroke="#000" stroke-width="82">205</text>
+    <text x="800" y="720" font-size="330" letter-spacing="-17" fill="url(#metal)" stroke="#111" stroke-width="28">205</text>
+    <text x="800" y="720" font-size="330" letter-spacing="-17" fill="none" stroke="url(#copper)" stroke-width="9">205</text>
+    <text x="800" y="720" font-size="330" letter-spacing="-17" fill="url(#grit)" opacity=".72">205</text>
   </g>
-  <path d="M256 656c220 37 468 37 688 0l-25 95c-204 30-434 30-638 0l-25-95Z" fill="url(#cream)" stroke="#090604" stroke-width="14"/>
-  <path d="M284 685c204 28 428 28 632 0" fill="none" stroke="#563113" stroke-width="5" opacity=".65"/>
-  <text x="600" y="728" text-anchor="middle" font-family="Impact, 'Arial Black', sans-serif" font-size="70" letter-spacing="17" fill="#120b07">SMOKE SHACK</text>
-  <g transform="translate(600 801)" stroke="#bf641f" stroke-width="10" stroke-linecap="round"><path d="M-80 38L80-38"/><path d="M-88-22L88 42"/><path d="M-80 38l-18 22M80-38l20-18"/></g>
-  <path d="M600 827c-12-24 12-31 2-54 25 16 35 42 13 64 19-14 22-35 15-53 35 40 11 77-30 91 8-12 8-21 0-31-10 15-20 24-36 12 22-18 1-27 36-29Z" fill="#f47a18"/>
+  <path d="M438 725c231 38 493 38 724 0l-29 108c-211 35-455 35-666 0l-29-108Z" fill="url(#metal)" stroke="#080604" stroke-width="16"/>
+  <path d="M471 756c212 27 446 27 658 0" fill="none" stroke="#673915" stroke-width="5" opacity=".6"/>
+  <path d="M476 820c206 25 442 25 648 0" fill="none" stroke="#2b1609" stroke-width="4" opacity=".5"/>
+  <text x="800" y="807" text-anchor="middle" font-family="Impact, 'Arial Black', sans-serif" font-size="80" letter-spacing="20" fill="#140d08">SMOKE SHACK</text>
+  <g transform="translate(800 902)" stroke="#bf641f" stroke-width="9" stroke-linecap="round"><path d="M-86 38L86-42"/><path d="M-95-30L95 47"/><path d="M-86 38l-20 25M86-42l23-17"/></g>
+  <path d="M800 929c-14-28 15-37 2-64 31 19 43 50 17 75 22-16 27-42 18-63 43 48 12 91-37 108 10-14 10-26 0-37-12 17-24 29-44 15 26-22 1-32 44-34Z" fill="#f47a18"/>
 </g>
 </svg>
