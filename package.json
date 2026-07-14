@@ -6,6 +6,7 @@
     "dev": "python3 -m http.server 5173",
     "build": "node scripts/build.mjs",
     "preview": "python3 -m http.server 4173 -d dist",
-    "screenshot": "node scripts/capture-screenshot.mjs"
+    "screenshot": "node scripts/capture-screenshot.mjs",
+    "setup:browser": "node scripts/install-browser.mjs"
   }
 }

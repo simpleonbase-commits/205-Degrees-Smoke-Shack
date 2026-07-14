@@ -1,6 +1,8 @@
 import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { constants } from 'node:fs';
 import { spawn, spawnSync } from 'node:child_process';
+import { existsSync } from 'node:fs';
+import { homedir } from 'node:os';
 import { resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
@@ -11,12 +13,47 @@ const port = Number(process.env.SCREENSHOT_PORT || 5173);
 
 await mkdir(outDir, { recursive: true });
 
+function commandPath(command) {
+  const result = spawnSync('bash', ['-lc', `command -v ${command}`], { encoding: 'utf8' });
+  return result.status === 0 && result.stdout.trim() ? result.stdout.trim() : null;
+}
+
 function firstExecutable(candidates) {
-  for (const command of candidates) {
-    const result = spawnSync('bash', ['-lc', `command -v ${command}`], { encoding: 'utf8' });
-    if (result.status === 0 && result.stdout.trim()) return result.stdout.trim();
+  for (const candidate of candidates) {
+    if (!candidate) continue;
+    if (candidate.includes('/') && existsSync(candidate)) return candidate;
+    const resolved = commandPath(candidate);
+    if (resolved) return resolved;
   }
   return null;
+}
+
+function browserCandidates() {
+  return [
+    process.env.BROWSER_EXECUTABLE,
+    process.env.CHROME_BIN,
+    process.env.CHROMIUM_BIN,
+    'chromium',
+    'chromium-browser',
+    'google-chrome',
+    'google-chrome-stable',
+    '/usr/bin/chromium',
+    '/usr/bin/chromium-browser',
+    '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    resolve(homedir(), '.cache/puppeteer/chrome/linux-*/chrome-linux64/chrome'),
+    resolve(homedir(), '.cache/ms-playwright/chromium-*/chrome-linux/chrome'),
+  ];
+}
+
+function expandGlob(pattern) {
+  if (!pattern) return [];
+  if (!pattern.includes('*')) return [pattern];
+  const result = spawnSync('bash', ['-lc', `compgen -G ${JSON.stringify(pattern)} | sort -r`], { encoding: 'utf8' });
+  return result.status === 0 && result.stdout.trim() ? result.stdout.trim().split('\n') : [];
+}
+
+function firstBrowser() {
+  return firstExecutable(browserCandidates().flatMap(expandGlob));
 }
 
 async function captureWithBrowser(browser) {
@@ -35,7 +72,7 @@ async function captureWithBrowser(browser) {
     const result = spawnSync(browser, args, { encoding: 'utf8' });
     if (result.status !== 0) throw new Error(result.stderr || result.stdout || `${browser} failed`);
     await access(pngOut, constants.R_OK);
-    console.log(`Captured browser screenshot: ${pngOut}`);
+    console.log(`Captured browser screenshot with ${browser}: ${pngOut}`);
     return true;
   } finally {
     server.kill('SIGTERM');
@@ -72,9 +109,10 @@ async function writeSvgFallback() {
 </svg>`;
   await writeFile(svgOut, svg);
   console.log(`No browser found; wrote SVG fallback preview: ${svgOut}`);
+  console.log('Tip: run npm run setup:browser, or set BROWSER_EXECUTABLE to a Chrome/Chromium binary, then rerun npm run screenshot.');
 }
 
-const browser = firstExecutable(['chromium', 'chromium-browser', 'google-chrome', 'google-chrome-stable']);
+const browser = firstBrowser();
 if (browser) {
   await captureWithBrowser(browser);
 } else {
