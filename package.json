@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "python3 -m http.server 5173",
     "build": "node scripts/build.mjs",
-    "preview": "python3 -m http.server 4173 -d dist"
+    "preview": "python3 -m http.server 4173 -d dist",
+    "screenshot": "node scripts/capture-screenshot.mjs"
   }
 }
